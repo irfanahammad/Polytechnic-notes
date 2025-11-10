@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html class="dark" lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Polytechnic Notes | S1 Resources</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet"/>
+<script>
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "primary": "#af25f4", /* Custom Purple */
+              "background-light": "#f7f5f8",
+              "background-dark": "#1c1022",
+            },
+            fontFamily: {
+              "display": ["Space Grotesk", "sans-serif"]
+            },
+            borderRadius: {"DEFAULT": "1rem", "lg": "2rem", "xl": "3rem", "full": "9999px"},
+            boxShadow: {
+              'glow': '0 0 15px 5px rgba(175, 37, 244, 0.4)',
+            }
+          },
+        },
+      }
+    </script>
+<style>
+      body {
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+      }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark font-display">
+<div class="relative flex min-h-screen w-full flex-col">
+
+<!-- Top App Bar -->
+<header class="sticky top-0 z-10 flex items-center justify-between bg-background-light/80 dark:bg-background-dark/80 p-4 pb-2 backdrop-blur-sm">
+<div class="flex size-12 shrink-0 items-center justify-center text-zinc-900 dark:text-white">
+<span class="material-symbols-outlined text-3xl">widgets</span>
+</div>
+<h1 class="flex-1 pr-12 text-center text-lg font-bold leading-tight tracking-[-0.015em] text-zinc-900 dark:text-white">Polytechnic Notes (S1)</h1>
+</header>
+
+<main class="flex-grow px-4">
+<!-- Main CTA Button - Now a functional link -->
+<div class="py-6">
+<a href="https://drive.google.com/drive/u/1/folders/1YxQn9JyMFlgxbkQyw5vmn2bgDQSBKWEF?q=sharedwith:CgJtZSgH%20parent:1YxQn9JyMFlgxbkQyw5vmn2bgDQSBKWEF" target="_blank" class="flex h-14 w-full cursor-pointer items-center justify-center overflow-hidden rounded-full bg-primary text-base font-bold leading-normal tracking-[0.015em] text-white shadow-glow transition-transform duration-200 ease-in-out active:scale-95">
+<span class="truncate">Access Complete Subject Drive Mirror</span>
+</a>
+</div>
+
+<!-- Section Header -->
+<h2 class="pb-3 pt-5 text-[22px] font-bold leading-tight tracking-[-0.015em] text-zinc-900 dark:text-white">Essential Study Resources</h2>
+
+<!-- Resources List -->
+<div class="flex flex-col gap-2 pb-4">
+
+<!-- ListItem: Applied Chemistry Notes (LINK UPDATED) -->
+<a href="https://drive.google.com/file/d/1C8W9GdZ28VAMYrNAND-tiRs9KhmaiPEr/view?usp=drive_link" target="_blank" class="flex min-h-[72px] cursor-pointer items-center justify-between gap-4 rounded-lg bg-background-light p-2 transition-colors hover:bg-zinc-200 dark:bg-zinc-900/50 dark:hover:bg-zinc-800/60">
+<div class="flex items-center gap-4">
+<div class="flex size-12 shrink-0 items-center justify-center rounded-lg bg-primary/20 text-primary">
+<span class="material-symbols-outlined">article</span>
+</div>
+<div class="flex flex-col justify-center">
+<p class="line-clamp-1 text-base font-medium leading-normal text-zinc-900 dark:text-white">Applied Chemistry Short Notes</p>
+<p class="line-clamp-2 text-sm font-normal leading-normal text-zinc-600 dark:text-zinc-400">Essential concepts summarized for quick revision (PDF)</p>
+</div>
+</div>
+<div class="shrink-0">
+<div class="flex size-7 items-center justify-center text-zinc-500 dark:text-zinc-400">
+<span class="material-symbols-outlined">chevron_right</span>
+</div>
+</div>
+</a>
+
+<!-- Placeholder for future resources -->
+<div class="flex min-h-[72px] items-center justify-center gap-4 rounded-lg border border-dashed border-zinc-300 dark:border-zinc-700 p-4 text-center text-zinc-500 dark:text-zinc-400">
+<p class="text-sm font-medium">More subjects and resources coming soon!</p>
+</div>
+
+</div>
+</main>
+
+<!-- Bottom Navigation Bar -->
+<footer class="sticky bottom-0 z-10 mt-auto border-t border-zinc-200/50 bg-background-light/80 dark:border-zinc-800/50 dark:bg-background-dark/80 backdrop-blur-sm">
+<div class="flex h-20 items-center justify-around px-4">
+<div class="flex flex-col items-center gap-1 text-primary">
+<span class="material-symbols-outlined">home</span>
+<span class="text-xs font-medium">Home</span>
+</div>
+<div class="flex flex-col items-center gap-1 text-zinc-500 dark:text-zinc-400">
+<span class="material-symbols-outlined">search</span>
+<span class="text-xs font-medium">Search</span>
+</div>
+<div class="flex flex-col items-center gap-1 text-zinc-500 dark:text-zinc-400">
+<span class="material-symbols-outlined">person</span>
+<span class="text-xs font-medium">Profile</span>
+</div>
+</div>
+</footer>
+</div>
+</body>
+</html>
