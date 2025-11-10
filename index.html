@@ -15,16 +15,19 @@
         theme: {
           extend: {
             colors: {
-              "primary": "#af25f4", /* Custom Purple */
-              "background-light": "#f7f5f8",
-              "background-dark": "#1c1022",
+              // Nothing Phone UI Monochrome Theme
+              "primary": "#FFFFFF", // Pure white for primary elements (used for contrast)
+              "main-bg": "#000000", // Pure Black Background
+              "card-bg": "#1A1A1A", // Dark Gray for subtle card separation
+              "text-light": "#F0F0F0", // Off-White Text
             },
             fontFamily: {
               "display": ["Space Grotesk", "sans-serif"]
             },
             borderRadius: {"DEFAULT": "1rem", "lg": "2rem", "xl": "3rem", "full": "9999px"},
             boxShadow: {
-              'glow': '0 0 15px 5px rgba(175, 37, 244, 0.4)',
+              // White glow for the CTA button
+              'glow': '0 0 15px 5px rgba(255, 255, 255, 0.2)',
             }
           },
         },
@@ -42,74 +45,222 @@
     }
   </style>
 </head>
-<body class="bg-background-light dark:bg-background-dark font-display">
+<body class="bg-main-bg font-display text-text-light">
 <div class="relative flex min-h-screen w-full flex-col">
 
 <!-- Top App Bar -->
-<header class="sticky top-0 z-10 flex items-center justify-between bg-background-light/80 dark:bg-background-dark/80 p-4 pb-2 backdrop-blur-sm">
-<div class="flex size-12 shrink-0 items-center justify-center text-zinc-900 dark:text-white">
-<span class="material-symbols-outlined text-3xl">widgets</span>
+<header class="sticky top-0 z-10 flex items-center justify-between bg-card-bg/80 p-4 pb-2 backdrop-blur-sm shadow-md shadow-black/30 rounded-b-lg mx-2 mt-2">
+<div class="flex size-12 shrink-0 items-center justify-center text-text-light">
+<span class="material-symbols-outlined">widgets</span>
 </div>
-<h1 class="flex-1 pr-12 text-center text-lg font-bold leading-tight tracking-[-0.015em] text-zinc-900 dark:text-white">Polytechnic Notes (S1)</h1>
+<h1 class="flex-1 pr-12 text-center text-lg font-bold leading-tight tracking-[-0.015em] text-text-light">Polytechnic Notes (S1)</h1>
 </header>
 
-<main class="flex-grow px-4">
-<!-- Main CTA Button - Now a functional link -->
-<div class="py-6">
-<a href="https://drive.google.com/drive/u/1/folders/1YxQn9JyMFlgxbkQyw5vmn2bgDQSBKWEF?q=sharedwith:CgJtZSgH%20parent:1YxQn9JyMFlgxbkQyw5vmn2bgDQSBKWEF" target="_blank" class="flex h-14 w-full cursor-pointer items-center justify-center overflow-hidden rounded-full bg-primary text-base font-bold leading-normal tracking-[0.015em] text-white shadow-glow transition-transform duration-200 ease-in-out active:scale-95">
-<span class="truncate">Access Complete Subject Drive Mirror</span>
-</a>
-</div>
-
-<!-- Section Header -->
-<h2 class="pb-3 pt-5 text-[22px] font-bold leading-tight tracking-[-0.015em] text-zinc-900 dark:text-white">Essential Study Resources</h2>
-
-<!-- Resources List -->
-<div class="flex flex-col gap-2 pb-4">
-
-<!-- ListItem: Applied Chemistry Notes (LINK UPDATED) -->
-<a href="https://drive.google.com/file/d/1C8W9GdZ28VAMYrNAND-tiRs9KhmaiPEr/view?usp=drive_link" target="_blank" class="flex min-h-[72px] cursor-pointer items-center justify-between gap-4 rounded-lg bg-background-light p-2 transition-colors hover:bg-zinc-200 dark:bg-zinc-900/50 dark:hover:bg-zinc-800/60">
-<div class="flex items-center gap-4">
-<div class="flex size-12 shrink-0 items-center justify-center rounded-lg bg-primary/20 text-primary">
-<span class="material-symbols-outlined">article</span>
-</div>
-<div class="flex flex-col justify-center">
-<p class="line-clamp-1 text-base font-medium leading-normal text-zinc-900 dark:text-white">Applied Chemistry Short Notes</p>
-<p class="line-clamp-2 text-sm font-normal leading-normal text-zinc-600 dark:text-zinc-400">Essential concepts summarized for quick revision (PDF)</p>
-</div>
-</div>
-<div class="shrink-0">
-<div class="flex size-7 items-center justify-center text-zinc-500 dark:text-zinc-400">
-<span class="material-symbols-outlined">chevron_right</span>
-</div>
-</div>
-</a>
-
-<!-- Placeholder for future resources -->
-<div class="flex min-h-[72px] items-center justify-center gap-4 rounded-lg border border-dashed border-zinc-300 dark:border-zinc-700 p-4 text-center text-zinc-500 dark:text-zinc-400">
-<p class="text-sm font-medium">More subjects and resources coming soon!</p>
-</div>
-
-</div>
+<main id="content-container" class="flex-grow px-4">
+    <!-- Content will be injected here by JavaScript -->
 </main>
 
-<!-- Bottom Navigation Bar -->
-<footer class="sticky bottom-0 z-10 mt-auto border-t border-zinc-200/50 bg-background-light/80 dark:border-zinc-800/50 dark:bg-background-dark/80 backdrop-blur-sm">
+<!-- Bottom Navigation Bar (Updated to use JS for internal navigation) -->
+<footer class="sticky bottom-0 z-10 mt-auto border-t border-text-light/50 bg-main-bg/80 backdrop-blur-sm">
 <div class="flex h-20 items-center justify-around px-4">
-<div class="flex flex-col items-center gap-1 text-primary">
-<span class="material-symbols-outlined">home</span>
-<span class="text-xs font-medium">Home</span>
-</div>
-<div class="flex flex-col items-center gap-1 text-zinc-500 dark:text-zinc-400">
-<span class="material-symbols-outlined">search</span>
-<span class="text-xs font-medium">Search</span>
-</div>
-<div class="flex flex-col items-center gap-1 text-zinc-500 dark:text-zinc-400">
-<span class="material-symbols-outlined">person</span>
-<span class="text-xs font-medium">Profile</span>
-</div>
+    <!-- Home (Active) -->
+    <a href="#home" id="nav-home" onclick="renderPage('home'); return false;" class="nav-item flex flex-col items-center gap-1 text-text-light hover:text-gray-500 transition-colors">
+        <span class="material-symbols-outlined">home</span>
+        <span class="text-xs font-medium">Home</span>
+    </a>
+    
+    <!-- Previous Year Papers (New Feature) -->
+    <a href="#papers" id="nav-papers" onclick="renderPage('papers'); return false;" class="nav-item flex flex-col items-center gap-1 text-gray-500 hover:text-text-light transition-colors">
+        <span class="material-symbols-outlined">history_edu</span>
+        <span class="text-xs font-medium">Papers</span>
+    </a>
+
+    <!-- Profile -->
+    <a href="#profile" id="nav-profile" onclick="renderPage('profile'); return false;" class="nav-item flex flex-col items-center gap-1 text-gray-500 hover:text-text-light transition-colors">
+        <span class="material-symbols-outlined">person</span>
+        <span class="text-xs font-medium">Profile</span>
+    </a>
 </div>
 </footer>
+
 </div>
+
+<script>
+    // --- Page Content Definitions ---
+
+    const homeContent = `
+        <!-- Main CTA Button (High Contrast - Nothing Style) -->
+        <div class="py-6">
+            <a href="https://drive.google.com/drive/u/1/folders/1YxQn9JyMFlgxbkQyw5vmn2bgDQSBKWEF?q=sharedwith:CgJtZSgH%20parent:1YxQn9JyMFlgxbkQyw5vmn2bgDQSBKWEF" target="_blank" 
+            class="flex h-14 w-full cursor-pointer items-center justify-center overflow-hidden rounded-full bg-main-bg border border-text-light text-base font-bold leading-normal tracking-[0.015em] text-text-light shadow-glow transition-transform duration-200 ease-in-out active:scale-95 hover:bg-card-bg/50">
+            <span class="truncate">Access Complete Subject Drive Mirror</span>
+            </a>
+        </div>
+
+        <!-- Section Header -->
+        <h2 class="pb-3 pt-5 text-[22px] font-bold leading-tight tracking-[-0.015em] text-text-light">Essential Study Resources</h2>
+
+        <!-- Resources List -->
+        <div class="flex flex-col gap-4 pb-4">
+
+            <!-- ListItem: Applied Chemistry File -->
+            <a href="https://drive.google.com/file/d/1Wp5lc2Tz_YPRQeAuyF3vKtpQwObNchVJ/view" target="_blank" class="flex min-h-[72px] cursor-pointer items-center justify-between gap-4 rounded-lg bg-card-bg p-4 transition-colors hover:bg-card-bg/70 shadow-lg shadow-black/20">
+                <div class="flex items-center gap-4">
+                    <div class="flex size-12 shrink-0 items-center justify-center rounded-lg border border-text-light/50 text-text-light">
+                        <span class="material-symbols-outlined">description</span>
+                    </div>
+                    <div class="flex flex-col justify-center">
+                        <p class="line-clamp-1 text-base font-medium leading-normal text-text-light">Applied Chemistry</p>
+                        <p class="line-clamp-2 text-sm font-normal leading-normal text-gray-500">View the essential short notes document (PDF/File link).</p>
+                    </div>
+                </div>
+                <div class="shrink-0">
+                    <div class="flex size-7 items-center justify-center text-gray-500">
+                        <span class="material-symbols-outlined">chevron_right</span>
+                    </div>
+                </div>
+            </a>
+
+            <!-- ListItem: Previous Year Papers (Triggers navigation) -->
+            <a href="#papers" onclick="renderPage('papers'); return false;" class="flex min-h-[72px] cursor-pointer items-center justify-between gap-4 rounded-lg bg-card-bg p-4 transition-colors hover:bg-card-bg/70 shadow-lg shadow-black/20">
+                <div class="flex items-center gap-4">
+                    <div class="flex size-12 shrink-0 items-center justify-center rounded-lg border border-text-light/50 text-text-light">
+                        <span class="material-symbols-outlined">history_edu</span>
+                    </div>
+                    <div class="flex flex-col justify-center">
+                        <p class="line-clamp-1 text-base font-medium leading-normal text-text-light">Previous Year Papers</p>
+                        <p class="line-clamp-2 text-sm font-normal leading-normal text-gray-500">Download and practice with official past exam questions.</p>
+                    </div>
+                </div>
+                <div class="shrink-0">
+                    <div class="flex size-7 items-center justify-center text-gray-500">
+                        <span class="material-symbols-outlined">chevron_right</span>
+                    </div>
+                </div>
+            </a>
+
+            <!-- Placeholder for future resources (Dashed Border) -->
+            <div class="flex min-h-[72px] items-center justify-center gap-4 rounded-lg border border-dashed border-text-light/50 p-4 text-center text-gray-500 bg-card-bg/50">
+                <p class="text-sm font-medium">More subjects and resources coming soon!</p>
+            </div>
+        </div>
+    `;
+
+    const papersContent = `
+        <h2 class="pb-3 pt-5 text-[22px] font-bold leading-tight tracking-[-0.015em] text-text-light">Previous Year Papers</h2>
+
+        <div class="flex flex-col gap-4 pb-4">
+            <!-- Applied Chemistry Papers Folder Link -->
+            <a href="https://drive.google.com/drive/folders/1ZhX2SZTj-ndOUkacmVNuXTunlyuAX9js?usp=sharing" target="_blank" class="flex min-h-[72px] cursor-pointer items-center justify-between gap-4 rounded-lg bg-card-bg p-4 transition-colors hover:bg-card-bg/70 shadow-lg shadow-black/20">
+                <div class="flex items-center gap-4">
+                    <div class="flex size-12 shrink-0 items-center justify-center rounded-lg border border-text-light/50 text-text-light">
+                        <span class="material-symbols-outlined">folder</span>
+                    </div>
+                    <div class="flex flex-col justify-center">
+                        <p class="line-clamp-1 text-base font-medium leading-normal text-text-light">Applied Chemistry Papers</p>
+                        <p class="line-clamp-2 text-sm font-normal leading-normal text-gray-500">Access the full folder of Chemistry previous year papers.</p>
+                    </div>
+                </div>
+                <div class="shrink-0">
+                    <div class="flex size-7 items-center justify-center text-gray-500">
+                        <span class="material-symbols-outlined">chevron_right</span>
+                    </div>
+                </div>
+            </a>
+            
+            <!-- Maths Papers Folder Link -->
+            <a href="https://drive.google.com/drive/folders/1XvF1EJNNzvc6CsRMYmEFXcUtP6NEkjgw?usp=sharing" target="_blank" class="flex min-h-[72px] cursor-pointer items-center justify-between gap-4 rounded-lg bg-card-bg p-4 transition-colors hover:bg-card-bg/70 shadow-lg shadow-black/20">
+                <div class="flex items-center gap-4">
+                    <div class="flex size-12 shrink-0 items-center justify-center rounded-lg border border-text-light/50 text-text-light">
+                        <span class="material-symbols-outlined">calculate</span>
+                    </div>
+                    <div class="flex flex-col justify-center">
+                        <p class="line-clamp-1 text-base font-medium leading-normal text-text-light">Maths Papers</p>
+                        <p class="line-clamp-2 text-sm font-normal leading-normal text-gray-500">Access the full folder of Mathematics previous year papers.</p>
+                    </div>
+                </div>
+                <div class="shrink-0">
+                    <div class="flex size-7 items-center justify-center text-gray-500">
+                        <span class="material-symbols-outlined">chevron_right</span>
+                    </div>
+                </div>
+            </a>
+            
+            <!-- Physics Papers Folder Link (NEW) -->
+            <a href="https://drive.google.com/drive/folders/1mJ6WPAxYBInSWmMQL22-toAxjYULBjnP?usp=sharing" target="_blank" class="flex min-h-[72px] cursor-pointer items-center justify-between gap-4 rounded-lg bg-card-bg p-4 transition-colors hover:bg-card-bg/70 shadow-lg shadow-black/20">
+                <div class="flex items-center gap-4">
+                    <div class="flex size-12 shrink-0 items-center justify-center rounded-lg border border-text-light/50 text-text-light">
+                        <span class="material-symbols-outlined">bolt</span>
+                    </div>
+                    <div class="flex flex-col justify-center">
+                        <p class="line-clamp-1 text-base font-medium leading-normal text-text-light">Physics Papers</p>
+                        <p class="line-clamp-2 text-sm font-normal leading-normal text-gray-500">Access the full folder of Physics previous year papers.</p>
+                    </div>
+                </div>
+                <div class="shrink-0">
+                    <div class="flex size-7 items-center justify-center text-gray-500">
+                        <span class="material-symbols-outlined">chevron_right</span>
+                    </div>
+                </div>
+            </a>
+
+            <!-- Placeholder for other subjects' papers (Updated) -->
+            <div class="flex min-h-[72px] items-center justify-center gap-4 rounded-lg border border-dashed border-text-light/50 p-4 text-center text-gray-500 bg-card-bg/50">
+                <p class="text-sm font-medium">More subjects coming soon!</p>
+            </div>
+        </div>
+    `;
+
+    const pageMap = {
+        'home': homeContent,
+        'papers': papersContent,
+        // 'profile': profileContent // Add profile content later if needed
+    };
+
+    /**
+     * Renders the specified page content and updates the navigation bar.
+     * @param {string} pageId The ID of the page to render ('home', 'papers', etc.).
+     */
+    function renderPage(pageId) {
+        const container = document.getElementById('content-container');
+        const navItems = document.querySelectorAll('.nav-item');
+        
+        // 1. Update Content
+        container.innerHTML = pageMap[pageId] || homeContent;
+        
+        // 2. Update Navigation Highlight
+        navItems.forEach(item => {
+            const isActive = item.id === `nav-${pageId}`;
+            
+            // Set active/inactive classes for Nothing UI aesthetic
+            if (isActive) {
+                item.classList.remove('text-gray-500', 'hover:text-text-light');
+                item.classList.add('text-text-light');
+            } else {
+                item.classList.remove('text-text-light');
+                item.classList.add('text-gray-500', 'hover:text-text-light');
+            }
+        });
+        
+        // 3. Update URL hash (for history and back button)
+        history.pushState(null, null, `#${pageId}`);
+
+        // Update the main header title dynamically
+        const headerTitle = document.querySelector('h1');
+        if (pageId === 'papers') {
+            headerTitle.textContent = 'Previous Year Papers';
+        } else {
+            headerTitle.textContent = 'Polytechnic Notes (S1)';
+        }
+    }
+
+    // --- Initialization ---
+
+    document.addEventListener('DOMContentLoaded', () => {
+        // Check URL hash to determine initial page, default to 'home'
+        const initialPage = window.location.hash.replace('#', '') || 'home';
+        renderPage(initialPage);
+    });
+</script>
 </body>
 </html>
