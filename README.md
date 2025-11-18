@@ -10,7 +10,7 @@ Every subject will be uploaded here and mirrored on Drive for quick access.
 👉 [Access the Website](https://polynotes1.netlify.app/)
 
 💬 **WhatsApp Group (S1 Updates + Notes):**
-👉 [Access the Group](https://chat.whatsapp.com/GohSG3jRchc3hy4dj5b9qP)
+👉 [Join the Group](https://chat.whatsapp.com/GohSG3jRchc3hy4dj5b9qP)
 
 Stay tuned — new PDFs and analysis reports will be added both on **GitHub** and **Drive** as progress continues.
 Keep checking back; this collection grows with every completed paper.
