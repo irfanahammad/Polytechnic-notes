@@ -15,4 +15,4 @@ Every subject will be uploaded here and mirrored on Drive for quick access.
 Stay tuned — new PDFs and analysis reports will be added both on **GitHub** and **Drive** as progress continues.
 Keep checking back; this collection grows with every completed paper.
 
-[sports and yoga images](https://docs.google.com/document/d/1Ulc1PAlnCeHTLD4u6rOCNdpo4vZfFtpQ22uoC2GiwoU/edit?usp=sharing)
+[**Sport And Yoga**](https://drive.google.com/drive/folders/1VQDXVbi_AiyMjNjOKtl-kEDzJ9XovQA5?usp=sharing)
